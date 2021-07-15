@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>プロフィール</h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-4">
+      <%=  link_to @user.name, user_path(@user) %>
+    </div>
+    <div class="col-md-3 col-md-offset-6">
+      <%= link_to "アカウントを削除する", user_path(@user), method: :delete,
+                                data: { confirm: "本当にこのアカウントを削除してよろしいですか？" } %>
+    </div>
+  </div>
+</div>
